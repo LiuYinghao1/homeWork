@@ -19,7 +19,7 @@ export default {
     return {
       column: [
         { label: '姓名', prop: 'name' },
-        { label: '性别', prop: 'gender' },
+        { label: '邢别', prop: 'gender' },
         { label: '创建时间', prop: 'create_date' },
         { label: '操作', type: 'slot', slot_name: 'operation', prop: 'operation' }
       ],
