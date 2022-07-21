@@ -16,7 +16,7 @@ export default {
     return {
       column: [
         {
-          label: '广告标题',
+          label: '广告表头',
           prop: 'title'
         },
         {
