@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pie</title>
+  <script src="./lib/echarts.min.js"></script>
+</head>
+
+<body>
+  <div style="width: 500px; height: 400px;"></div>
+  <script>
+    var mCharts = echarts.init(document.querySelector("div"))
+    var pieData = [
+      { name: '淘宝', value: 5000 },
+      { name: '京东', value: 4500 },
+      { name: '拼夕夕', value: 3000 },
+      { name: '唯品会', value: 1000 },
+      { name: '抖音', value: 3000 },
+    ]
+    var option = {
+      series: {
+        type: 'pie',
+        data: pieData,
+        label: {
+          formatter: function (arg) {
+            // console.log(arg);
+            return arg.name + '平台' + arg.value + '元\n' + arg.percent + '%'
+          }
+        },
+        // radius: ["50%", "75%"],    // 内环比与外环比
+        roseType: 'radius',  //南丁格尔图，半径随数量多少改变
+        selectedMode: 'single',
+        selectedOffset: 50
+      }
+    }
+
+
+    mCharts.setOption(option)
+  </script>
+</body>
+
+</html>
