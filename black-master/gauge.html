@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gauge</title>
+  <script src="./lib/echarts.min.js"></script>
+</head>
+
+<body>
+  <div style="width: 500px; height: 400px; border: 1px solid #f00;"></div>
+
+  <script>
+    var mCharts = echarts.init(document.querySelector("div"))
+
+    var option = {
+      series: [
+        {
+          type: 'gauge',
+          data: [
+            {
+              value: 95
+            }  //一个对象代表一个指针
+          ],
+          // min: 50   //min max 控制仪表盘取值范围
+        }
+      ]
+    }
+
+    mCharts.setOption(option)
+  </script>
+</body>
+
+</html>
